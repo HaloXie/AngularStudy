@@ -1,0 +1,68 @@
+<h2>User Reg</h2>
+
+<div class="people_list">
+  <ul>
+    <li>
+      User Name：<input
+        type="text"
+        id="username"
+        [(ngModel)]="peopleInfo.userName"
+        value="fonm_input"
+      />
+    </li>
+    <li>
+      Sex：
+      <input
+        type="radio"
+        value="1"
+        name="sex"
+        id="sex1"
+        [(ngModel)]="peopleInfo.sex"
+      />
+      <label for="sex1">Man</label>
+      <input
+        type="radio"
+        value="2"
+        name="sex"
+        id="sex2"
+        [(ngModel)]="peopleInfo.sex"
+      />
+      <label for="sex2">Woman </label>
+    </li>
+    <li>
+      City：
+      <select name="city" id="city" [(ngModel)]="peopleInfo.city">
+        <option [value]="item" *ngFor="let item of peopleInfo.cityList">{{
+          item
+        }}</option>
+      </select>
+    </li>
+    <li>
+      Favorite：
+      <span *ngFor="let item of peopleInfo.hobby; let key = index">
+        <input
+          type="checkbox"
+          [id]="'check' + key"
+          [(ngModel)]="item.checked"
+        />
+        <label [for]="'check' + key"> {{ item.title }}</label>
+        &nbsp;&nbsp;
+      </span>
+    </li>
+    <li>
+      Remark：
+      <textarea
+        name="mark"
+        id="mark"
+        cols="30"
+        rows="10"
+        [(ngModel)]="peopleInfo.mark"
+      ></textarea>
+    </li>
+  </ul>
+  <button (click)="doSubmit()" class="submit">Get Form Info</button>
+  <br />
+  <br />
+  <pre>{{ peopleInfo | json }}</pre>
+  <pre [innerHTML]="peopleInfo | jsonPrettyPrint"></pre>
+</div>
