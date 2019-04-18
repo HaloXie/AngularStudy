@@ -1,3 +1,13 @@
 <p>
   demo-to-do-list-search works!
 </p>
+<div class="search">
+  <input type="text" [(ngModel)]="keyWord" />
+  <button (click)="doSearch()">Search</button>
+  <hr />
+  <ul>
+    <li *ngFor="let item of historyList; let key = index">
+      {{ item }} ------ <button (click)="deleteHistroy(key)">X</button>
+    </li>
+  </ul>
+</div>
