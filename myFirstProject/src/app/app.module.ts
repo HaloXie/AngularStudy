@@ -8,12 +8,15 @@ import { SharedModule } from './shared/shared.moudle';
 import { AppComponent } from './app.component';
 import { FormDomComponent } from './components/form-dom/form-dom.component';
 import { DemoToDoListComponent } from './components/demo-to-do-list/demo-to-do-list.component';
+import { DemoToDoListSearchComponent } from './components/demo-to-do-list-search/demo-to-do-list-search.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormDomComponent,
-    DemoToDoListComponent
+    DemoToDoListComponent,
+    DemoToDoListSearchComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,SharedModule],
   providers: [],
