@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { FormDomComponent } from './components/form-dom/form-dom.component';
 import { DemoToDoListComponent } from './components/demo-to-do-list/demo-to-do-list.component';
 import { DemoToDoListSearchComponent } from './components/demo-to-do-list-search/demo-to-do-list-search.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DemoToDoListSearchComponent } from './components/demo-to-do-list-search
     AppComponent,
     FormDomComponent,
     DemoToDoListComponent,
-    DemoToDoListSearchComponent
+    DemoToDoListSearchComponent,
+    DashboardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule,SharedModule],
   providers: [],
