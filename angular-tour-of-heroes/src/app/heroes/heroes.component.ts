@@ -8,7 +8,7 @@ import { HeroService } from '../services/hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  constructor(private heroService: HeroService) {} // DI
+  constructor(private heroService: HeroService) {} // => DI
 
   hero: HeroModel = {
     id: 1,
@@ -20,7 +20,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
-    this.getObservableHeroes();
+    this.getHttpHeroes();
   }
 
   onSelect(hero: HeroModel): void {
@@ -32,7 +32,12 @@ export class HeroesComponent implements OnInit {
   }
 
   getObservableHeroes(): void {
-    this.heroes =  new Array<HeroModel>();
+    this.heroes = new Array<HeroModel>();
     this.heroService.getObservableHeroes().subscribe(x => (this.heroes = x));
+  }
+
+  getHttpHeroes(): void {
+    this.heroes = new Array<HeroModel>();
+    this.heroService.getHttpHeroes().subscribe(x => (this.heroes = x));
   }
 }
