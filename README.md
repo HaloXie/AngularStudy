@@ -3,8 +3,8 @@ AngularStudy
 这个文档是为了更好的记忆和整理Angular ~
 包含项目Routin 以及使用的是 CSS  作为样式管理
 
-目前有两个项目，
-1、官方的提供的学习例子（英雄管理）https://www.angular.cn/tutorial
+目前有两个项目<br/>
+1、官方的提供的学习例子（英雄管理）https://www.angular.cn/tutorial<br/>
 2、从网上找到的学习资源，里面包含视频，一共25节，很详细适合很新的新手 https://www.itying.com/goods-1047.html
 
 # 创建Angular 项目
